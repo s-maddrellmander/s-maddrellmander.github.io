@@ -29,7 +29,7 @@ github:
   username: s-maddrellmander # change to your GitHub username
 
 twitter:
-  username: s-maddrellmander # change to your Twitter username
+  username: smaddrellmander # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,7 +38,7 @@ social:
   email: sam.maddrellmander@gmail.com
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/s-maddrellmander # change to your Twitter homepage
+    - https://twitter.com/smaddrellmander # change to your Twitter homepage
     - https://github.com/s-maddrellmander # change to your GitHub homepage
     - https://www.linkedin.com/in/sam-maddrell-mander/
 
