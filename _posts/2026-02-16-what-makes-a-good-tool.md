@@ -24,7 +24,7 @@ For those interested - what does it actually do? In the minimal version the pack
 Then when the gadget line is found, we get a neat little print out with the time since the last gadget line, a summary of the line before the gadget call, and a formatted reference to the line in the file that I can click though on VSCode directly to the location.
 
 
-![alt text](image.png)
+![Gadget profiling example](/assets/img/gadget-example.png)
 *Example from a tiny numpy ML script - we can see each stage including seeing reassuringly the backwards is substantially slower than forwards. We clearly don't get averages as with a real profiler, but we can spot major red flags.* 
 
 That’s it. Everything I need. I can see exactly how long the interval took, I can scan down the left side of the output and visually see where the number is longer than the surrounding intervals, usually seeing the relevant line is enough to go, “oh yeah, obviously” but if not I can jump directly into the file via the reference. 
