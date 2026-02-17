@@ -1,4 +1,10 @@
-
+---
+layout: post
+title: "what makes a good tool?"
+date: 2026-02-16 10:00:00 +0000
+categories: [Meta, Tools]
+tags: [python, profiling, tools]
+---
 # what makes a good tool?
 
 As someone writing code, we are constantly making tools. Over the years I’ve increasing come to the realisation that a lot of them have been rubbish. That sense of a codebase slowly getting away, that feeling of rather than using that lovingly created abstracted method I’ll just write the thing I need again for this one off. Maybe this is bad discipline, maybe it’s that I didn’t write things properly the first time, but there’s also something about making the right tool for the right job. 
