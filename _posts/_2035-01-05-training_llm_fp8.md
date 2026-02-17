@@ -1,3 +1,10 @@
+---
+title: "Training an LLM in FP8"
+date: 2026-01-05 10:00:00 +0000
+categories: [Projects]
+tags: [LLM, FP8, training]
+math: true
+---
 
 # What happens when you train an LLM in fp8?
 
