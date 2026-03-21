@@ -1,6 +1,6 @@
 ---
 title: "sigmoid: a deep dive"
-date: 2026-03-22 10:00:00 +0000
+date: 2026-03-21 10:00:00 +0000
 categories: [idlemachines, math, practice]
 tags: [sigmoid, activation functions, math]
 math: true
