@@ -8,7 +8,7 @@ math: true
 
 We all know the sigmoid function. It's almost the canonical activation function. The first one you learn in a deep learning 101 course. It's a simple function that takes any real-valued input and squashes it to a value between 0 and 1 as
 
-$$\text{sigmoid}(x) = \frac{1}{1 + e^{-x}}$$
+$$\sigma(x) = \frac{1}{1 + e^{-x}}$$
 
 and we often pretend this gives us a probability, or at least something pseudo-probabilistic.
 
@@ -50,13 +50,13 @@ Or in some cases actually even worse, these can surface as silent errors, and cl
 
 Fortunately here the fix is easy, we can use the fact that anything multiplied by 1 is itself, and rewrite the function as:
 $$
-\text{sigmoid}(x) = \frac{1}{1 + e^{-x}} \cdot \frac{e^x}{e^x} = \frac{e^x}{e^x + 1}
+\sigma(x) = \frac{1}{1 + e^{-x}} \cdot \frac{e^x}{e^x} = \frac{e^x}{e^x + 1}
 $$
 
 Then if we play the same game we can see that for x < 0, the exponent is negative, and we only ever tend towards 0, so we can be sure to avoid overflow.
 We can then combine these two cases into a single function a little more formally like this:
 $$
-\text{sigmoid}(x) = \begin{cases}
+\sigma(x) = \begin{cases}
 \frac{1}{1 + e^{-x}} & \text{if } x \geq 0 \\
 \frac{e^x}{e^x + 1} & \text{if } x < 0
 \end{cases}
@@ -124,10 +124,10 @@ def sigmoid_backward(dL_dsigma, sigma_x):
 
 # Sanity check
 x = np.array([-1000, -10, 0, 10, 1000])
-sigma_x = np.array([sigmoid(xi) for xi in x])
-dL_dsigma = np.ones_like(x)
-dL_dx = np.array([sigmoid_backward(dL_dsigma[i], sigma_x[i]) for i in range(len(x))])
-print(dL_dx)
+sigma_x = sigmoid(x)
+dL_dsigma = np.array([1, 1, 1, 1, 1]) # Upstream gradient of 1 for simplicity
+dL_dx = sigmoid_backward(dL_dsigma, sigma_x)
+print(dL_dx) # Should be close to 0 for extreme values, and around 0.25 for x=0
 ```
 
 The exteme values will return exactly 0.
